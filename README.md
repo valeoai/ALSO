@@ -21,8 +21,7 @@ This is the reference PyTorch implementation for training and testing self-super
 
 - [Dependencies](#dependencies)
 - [Installation](#installation)
-- [Pre-training](#pre-training)
-- [Downstream](#downstream)
+- [Semantic segmentation](#semantic-segmentation)
 - [Pre-trained models](#pre-trained-models)
 - [Performances](#performances)
 - [Acknowledgments](#acknowledgments)
@@ -56,7 +55,7 @@ cd also_selfsup
 ```
 
 
-### Semantic segmentation
+## Semantic segmentation
 
 ### Pre-training
 
@@ -73,7 +72,7 @@ for other datasets, replace `cfg=nuscenes` by the desired dataset
 - [SemanticPOSS](http://www.poss.pku.edu.cn/semanticposs.html): *To be added*
 - [LivoxSimuDataset](https://www.livoxtech.com/simu-dataset): *To be added*
 
-#### Parameters
+### Parameters
 
 We use [Hydra](https://hydra.cc/) for easy configuration of trainings.
 The pretraining parameters are set for pre-training with a NVidia-V100 16Gb.
