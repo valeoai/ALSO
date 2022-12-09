@@ -8,7 +8,7 @@ Björn Michele &nbsp;&nbsp;&nbsp;
 Gilles Puy &nbsp;&nbsp;&nbsp;
 Renaud Marlet
 
-[![Arxiv](http://img.shields.io/badge/paper-arxiv.2206.13294-B31B1B.svg)]()
+[![Arxiv](http://img.shields.io/badge/paper-arxiv.XXXX.XXXXX-B31B1B.svg)]()
 
 
 ![Overview](doc/overview.png)
