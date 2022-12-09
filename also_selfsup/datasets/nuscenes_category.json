@@ -1,0 +1,194 @@
+[
+  {
+    "token": "aaddc3454ccbefbb2d8d8461f8f7f481",
+    "name": "noise",
+    "description": "Any lidar return that does not correspond to a physical object, such as dust, vapor, noise, fog, raindrops, smoke and reflections.",
+    "index": 0
+  },
+  {
+    "token": "63a94dfa99bb47529567cd90d3b58384",
+    "name": "animal",
+    "description": "All animals, e.g. cats, rats, dogs, deer, birds.",
+    "index": 1
+  },
+  {
+    "token": "1fa93b757fc74fb197cdd60001ad8abf",
+    "name": "human.pedestrian.adult",
+    "description": "Adult subcategory.",
+    "index": 2
+  },
+  {
+    "token": "b1c6de4c57f14a5383d9f963fbdcb5cb",
+    "name": "human.pedestrian.child",
+    "description": "Child subcategory.",
+    "index": 3
+  },
+  {
+    "token": "909f1237d34a49d6bdd27c2fe4581d79",
+    "name": "human.pedestrian.construction_worker",
+    "description": "Construction worker",
+    "index": 4
+  },
+  {
+    "token": "403fede16c88426885dd73366f16c34a",
+    "name": "human.pedestrian.personal_mobility",
+    "description": "A small electric or self-propelled vehicle, e.g. skateboard, segway, or scooters, on which the person typically travels in a upright position. Driver and (if applicable) rider should be included in the bounding box along with the vehicle.",
+    "index": 5
+  },
+  {
+    "token": "bb867e2064014279863c71a29b1eb381",
+    "name": "human.pedestrian.police_officer",
+    "description": "Police officer.",
+    "index": 6
+  },
+  {
+    "token": "6a5888777ca14867a8aee3fe539b56c4",
+    "name": "human.pedestrian.stroller",
+    "description": "Strollers. If a person is in the stroller, include in the annotation.",
+    "index": 7
+  },
+  {
+    "token": "b2d7c6c701254928a9e4d6aac9446d79",
+    "name": "human.pedestrian.wheelchair",
+    "description": "Wheelchairs. If a person is in the wheelchair, include in the annotation.",
+    "index": 8
+  },
+  {
+    "token": "653f7efbb9514ce7b81d44070d6208c1",
+    "name": "movable_object.barrier",
+    "description": "Temporary road barrier placed in the scene in order to redirect traffic. Commonly used at construction sites. This includes concrete barrier, metal barrier and water barrier. No fences.",
+    "index": 9
+  },
+  {
+    "token": "063c5e7f638343d3a7230bc3641caf97",
+    "name": "movable_object.debris",
+    "description": "Movable object that is left on the driveable surface that is too large to be driven over safely, e.g tree branch, full trash bag etc.",
+    "index": 10
+  },
+  {
+    "token": "d772e4bae20f493f98e15a76518b31d7",
+    "name": "movable_object.pushable_pullable",
+    "description": "Objects that a pedestrian may push or pull. For example dolleys, wheel barrows, garbage-bins, or shopping carts.",
+    "index": 11
+  },
+  {
+    "token": "85abebdccd4d46c7be428af5a6173947",
+    "name": "movable_object.trafficcone",
+    "description": "All types of traffic cone.",
+    "index": 12
+  },
+  {
+    "token": "0a30519ee16a4619b4f4acfe2d78fb55",
+    "name": "static_object.bicycle_rack",
+    "description": "Area or device intended to park or secure the bicycles in a row. It includes all the bikes parked in it and any empty slots that are intended for parking bikes.",
+    "index": 13
+  },
+  {
+    "token": "fc95c87b806f48f8a1faea2dcc2222a4",
+    "name": "vehicle.bicycle",
+    "description": "Human or electric powered 2-wheeled vehicle designed to travel at lower speeds either on road surface, sidewalks or bike paths.",
+    "index": 14
+  },
+  {
+    "token": "003edbfb9ca849ee8a7496e9af3025d4",
+    "name": "vehicle.bus.bendy",
+    "description": "Bendy bus subcategory. Annotate each section of the bendy bus individually.",
+    "index": 15
+  },
+  {
+    "token": "fedb11688db84088883945752e480c2c",
+    "name": "vehicle.bus.rigid",
+    "description": "Rigid bus subcategory.",
+    "index": 16
+  },
+  {
+    "token": "fd69059b62a3469fbaef25340c0eab7f",
+    "name": "vehicle.car",
+    "description": "Vehicle designed primarily for personal use, e.g. sedans, hatch-backs, wagons, vans, mini-vans, SUVs and jeeps. If the vehicle is designed to carry more than 10 people use vehicle.bus. If it is primarily designed to haul cargo use vehicle.truck. ",
+    "index": 17
+  },
+  {
+    "token": "5b3cd6f2bca64b83aa3d0008df87d0e4",
+    "name": "vehicle.construction",
+    "description": "Vehicles primarily designed for construction. Typically very slow moving or stationary. Cranes and extremities of construction vehicles are only included in annotations if they interfere with traffic. Trucks used to haul rocks or building materials are considered vehicle.truck rather than construction vehicles.",
+    "index": 18
+  },
+  {
+    "token": "732cce86872640628788ff1bb81006d4",
+    "name": "vehicle.emergency.ambulance",
+    "description": "All types of ambulances.",
+    "index": 19
+  },
+  {
+    "token": "7b2ff083a64e4d53809ae5d9be563504",
+    "name": "vehicle.emergency.police",
+    "description": "All types of police vehicles including police bicycles and motorcycles.",
+    "index": 20
+  },
+  {
+    "token": "dfd26f200ade4d24b540184e16050022",
+    "name": "vehicle.motorcycle",
+    "description": "Gasoline or electric powered 2-wheeled vehicle designed to move rapidly (at the speed of standard cars) on the road surface. This category includes all motorcycles, vespas and scooters.",
+    "index": 21
+  },
+  {
+    "token": "90d0f6f8e7c749149b1b6c3a029841a8",
+    "name": "vehicle.trailer",
+    "description": "Any vehicle trailer, both for trucks, cars and bikes.",
+    "index": 22
+  },
+  {
+    "token": "6021b5187b924d64be64a702e5570edf",
+    "name": "vehicle.truck",
+    "description": "Vehicles primarily designed to haul cargo including pick-ups, lorrys, trucks and semi-tractors. Trailers hauled after a semi-tractor should be labeled as vehicle.trailer",
+    "index": 23
+  },
+  {
+    "token": "89d20ff31e1fbdc844a74ff50f90c65c",
+    "name": "flat.driveable_surface",
+    "description": "All paved or unpaved surfaces that a car can drive on with no concern of traffic rules.",
+    "index": 24
+  },
+  {
+    "token": "65deb30a3b9481422af8ad8adc983d63",
+    "name": "flat.other",
+    "description": "All other forms of horizontal ground-level structures that do not belong to any of driveable_surface, curb, sidewalk and terrain. Includes elevated parts of traffic islands, delimiters, rail tracks, stairs with at most 3 steps and larger bodies of water (lakes, rivers).",
+    "index": 25
+  },
+  {
+    "token": "bf7b16f053ff2ea504a3d083fed223dd",
+    "name": "flat.sidewalk",
+    "description": "Sidewalk, pedestrian walkways, bike paths, etc. Part of the ground designated for pedestrians or cyclists. Sidewalks do **not** have to be next to a road.",
+    "index": 26
+  },
+  {
+    "token": "2cfb3bdc510a4d28a4a1a78e611e4dfc",
+    "name": "flat.terrain",
+    "description": "Natural horizontal surfaces such as ground level horizontal vegetation (< 20 cm tall), grass, rolling hills, soil, sand and gravel.",
+    "index": 27
+  },
+  {
+    "token": "a6773ab08859eb7037c36acc6d302a57",
+    "name": "static.manmade",
+    "description": "Includes man-made structures but not limited to: buildings, walls, guard rails, fences, poles, drainages, hydrants, flags, banners, street signs, electric circuit boxes, traffic lights, parking meters and stairs with more than 3 steps.",
+    "index": 28
+  },
+  {
+    "token": "0d35abf67670c9b13a4fe6550c698e73",
+    "name": "static.other",
+    "description": "Points in the background that are not distinguishable, or objects that do not match any of the above labels.",
+    "index": 29
+  },
+  {
+    "token": "e8fc03c4a3ce3cd25c9bc1c808197861",
+    "name": "static.vegetation",
+    "description": "Any vegetation in the frame that is higher than the ground, including bushes, plants, potted plants, trees, etc. Only tall grass (> 20cm) is part of this, ground level grass is part of `terrain`.",
+    "index": 30
+  },
+  {
+    "token": "3847caf8adb16ed747535b76fdb9fd05",
+    "name": "vehicle.ego",
+    "description": "The vehicle on which the cameras, radar and lidar are mounted, that is sometimes visible at the bottom of the image.",
+    "index": 31
+  }
+]
