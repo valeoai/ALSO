@@ -209,4 +209,4 @@ This project would not have been possible without many community ressources and 
 - [SPVNAS](https://github.com/mit-han-lab/spvnas)
 - [POCO](https://github.com/valeoai/POCO)
 
-Please, consider acknowleding these project.
+Please, consider acknowleding these projects.
