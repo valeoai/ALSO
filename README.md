@@ -3,8 +3,8 @@
 # ALSO: Automotive Lidar Self-supervision by Occupancy estimation
 
 [Alexandre Boulch](https://boulch.eu/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
-[Corentin Sautier](https://fr.linkedin.com/in/corentin-sautier-74415917b)<sup>1,2</sup>&nbsp;&nbsp;&nbsp;
-[Björn Michele](https://scholar.google.com/citations?user=xQcKnXkAAAAJ&hl=en&oi=ao)<sup>1,4</sup>&nbsp;&nbsp;&nbsp;
+[Corentin Sautier](https://scholar.google.com/citations?user=xYDkHEsAAAAJ&hl=en&oi=ao)<sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+[Björn Michele](https://github.com/BjoernMichele)<sup>1,4</sup>&nbsp;&nbsp;&nbsp;
 [Gilles Puy](https://sites.google.com/site/puygilles/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
 [Renaud Marlet](http://imagine.enpc.fr/~marletr/)<sup>1,2,3</sup>
 
