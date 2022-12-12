@@ -199,8 +199,6 @@ Detection | KITTI3D | SECOND/PVRCNN | download | trained for KITTI3D |
 
 Here are links to pre-trained models
 
-## Performances
-
 ## Acknowledgments
 
 This project would not have been possible without many community ressources and repositories. Among them:
