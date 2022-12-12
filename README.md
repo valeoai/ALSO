@@ -25,6 +25,8 @@
 
 ![Overview](doc/overview.png)
 
+<br/>
+
 This is the reference PyTorch implementation for training and testing self-supervision for automotive lidar point cloud using the method described in our paper [**ALSO: Automotive Lidar Self-supervision by Occupancy estimation**](https://github.com/valeoai/ALSO)
 
 </div>
