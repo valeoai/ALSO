@@ -18,14 +18,14 @@
 
 <br/>
 
-[![Arxiv](http://img.shields.io/badge/paper-arxiv.XXXX.XXXXX-B31B1B.svg)]()
+[![Arxiv](http://img.shields.io/badge/paper-arxiv.XXXX.XXXXX-B31B1B.svg)](https://github.com/valeoai/ALSO)
 
 <br/>
 
 
 ![Overview](doc/overview.png)
 
-This is the reference PyTorch implementation for training and testing self-supervision for automotive lidar point cloud using the method described in our paper [**ALSO: Automotive Lidar Self-supervision by Occupancy estimation**]()
+This is the reference PyTorch implementation for training and testing self-supervision for automotive lidar point cloud using the method described in our paper [**ALSO: Automotive Lidar Self-supervision by Occupancy estimation**](https://github.com/valeoai/ALSO)
 
 </div>
 
