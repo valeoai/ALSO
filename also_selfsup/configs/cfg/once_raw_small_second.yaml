@@ -1,0 +1,67 @@
+
+name: ONCEsmall
+dataset_name: ONCE
+dataset_root: data/once
+desc: inI_predI
+save_dir: results/ONCESmall/
+
+# splits
+train_split: raw_small
+val_split: val
+test_split: val
+
+# inputs
+inputs: ["pos", "intensities"]
+
+# optimization
+training:
+  max_epochs: 50
+  batch_size: 8
+  val_interval: 5
+
+optimizer: torch.optim.AdamW
+optimizer_params:
+  lr: 0.001
+scheduler: null
+
+# network
+network:
+  framework: spconv 
+  backbone: SECOND
+  backbone_params: 
+    config: "./configs/misc/second_for_pretraining_once.yaml"
+    quantization_params:
+      spatial_extent: [-75.2, -75.2, -5.0, 75.2, 75.2, 3.0]
+      voxel_size: [0.1, 0.1, 0.2]
+  decoder: InterpNet
+  decoder_params:
+    radius: 1.0
+    column_search: true
+    out_channels: 2
+    intensity_loss: true
+    radius_search: True
+  latent_size: 128
+
+# losses
+loss:
+  recons_loss_lambda: 1
+  intensity_loss_lambda: 1
+
+# misc
+device: cuda
+num_device: 1
+threads: 6
+interactive_log: false
+logging: INFO
+resume: null
+
+# sampling
+manifold_points: 80000
+non_manifold_points: 4096
+
+# data augmentation
+transforms:
+  voxel_decimation: 0.05
+  scaling_intensities: false
+  random_rotation_z: true
+  random_flip: true

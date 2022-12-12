@@ -11,12 +11,14 @@ class InterpNet(torch.nn.Module):
 
     def __init__(self, latent_size, out_channels, K=1, radius=1.0,  spatial_prefix="", 
             intensity_loss=False,
-            radius_search=True
+            radius_search=True,
+            column_search=False
             ):
         super().__init__()
 
         self.intensity_loss = intensity_loss
         self.out_channels = out_channels
+        self.column_search = column_search
 
         logging.info(f"InterpNet - radius={radius} - out_channels={self.out_channels}")
 
@@ -53,7 +55,10 @@ class InterpNet(torch.nn.Module):
         latents = data["latents"]
 
         # neighborhood search
-        row, col = self.search_function(x=pos_source, y=pos_target, batch_x=batch_source, batch_y=batch_target)
+        if self.column_search:
+            row, col = self.search_function(x=pos_source[:,:2], y=pos_target[:,:2], batch_x=batch_source, batch_y=batch_target)
+        else:
+            row, col = self.search_function(x=pos_source, y=pos_target, batch_x=batch_source, batch_y=batch_target)
 
         # compute reltive position between query and input point cloud
         # and the corresponding latent vectors

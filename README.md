@@ -2,13 +2,25 @@
 
 # ALSO: Automotive Lidar Self-supervision by Occupancy estimation
 
-Alexandre Boulch &nbsp;&nbsp;&nbsp;
-Corentin Sautier &nbsp;&nbsp;&nbsp;
-Björn Michele &nbsp;&nbsp;&nbsp;
-Gilles Puy &nbsp;&nbsp;&nbsp;
-Renaud Marlet
+[Alexandre Boulch](https://boulch.eu/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+[Corentin Sautier](https://fr.linkedin.com/in/corentin-sautier-74415917b)<sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+[Björn Michele](https://scholar.google.com/citations?user=xQcKnXkAAAAJ&hl=en&oi=ao)<sup>1,4</sup>&nbsp;&nbsp;&nbsp;
+[Gilles Puy](https://sites.google.com/site/puygilles/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+[Renaud Marlet](http://imagine.enpc.fr/~marletr/)<sup>1,2,3</sup>
+
+<sub>
+<sup>1</sup> Valeo.ai, Paris, France
+<sup>2</sup> LIGM, Ecole des Ponts, Univ Gustave Eiffel, CNRS, Marne-la-Vallée, France
+
+<sup>3</sup> Inria, Paris, France
+<sup>4</sup> CNRS, IRISA, Univ. Bretagne Sud, Vannes, France
+</sub>
+
+<br/>
 
 [![Arxiv](http://img.shields.io/badge/paper-arxiv.XXXX.XXXXX-B31B1B.svg)]()
+
+<br/>
 
 
 ![Overview](doc/overview.png)
@@ -19,6 +31,7 @@ This is the reference PyTorch implementation for training and testing self-super
 
 ## Overview
 
+- [Citation](#citation)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Semantic segmentation](#semantic-segmentation)
@@ -27,6 +40,14 @@ This is the reference PyTorch implementation for training and testing self-super
 - [Acknowledgments](#acknowledgments)
 
 ---
+
+## Citation
+
+Please acknowledge our work in your publications:
+
+```
+To be added
+```
 
 ## Dependencies
 
@@ -53,6 +74,13 @@ Then all scripts can be run from `also_selfsup` folder:
 ```
 cd also_selfsup
 ```
+
+## Datasets
+
+### ONCE
+
+We follow intruction from 
+[ONCE dataset](https://github.com/PointsCoder/ONCE_Benchmark/blob/master/docs/GETTING_STARTED.md) to generate the information files of the `raw_small` dataset.
 
 
 ## Semantic segmentation
@@ -131,14 +159,42 @@ Second, run the evaluation script
 python eval.py --split val --config path_to_downstream_model/config.yaml --ckpt path_to_downstream_checkpoint/trained_model_XXX.ckpt
 ```
 
+## Detection
+
+### Pre-training
+
+Similar to semantic segmentation, pre-training for detection can simply be run using:
+
+```bash
+python train_selfsupervised.py cfg=kitti3d_second
+python train_selfsupervised.py cfg=nuscenes_second_kitti
+```
+
+### Downstream
+
+First, convert the trained model to be loaded
+```bash
+python convert_models.py --ckpt path_to_pretraining_checkpoint
+```
+
+Second, use the pre-trained model with the official OpenPCDet code:
+```bash
+cd path_to_OpenPCDet/tools/
+python train.py --cfg_file cfgs/kitti_models/second.yaml --extra_tag --pretrained_model path_to_pretrained_model/pretrained_backbone_XXX.ckpt
+```
+
 ## Pre-trained models
 
-Task | Dataset | Model | Link |
----|---|---|---|
+Task | Pre-training dataset | Model | Link | Notes |
+---|---|---|---|---|
 Semantic segmentation | nuScenes | MinkUNet34   | download |
 &nbsp; | &nbsp; | SPVCNN     | download |
 &nbsp; | SemanticKITTI | MinkUNet18SC  | download |
 &nbsp; | &nbsp; | SPVCNN     | download |
+Detection | KITTI3D | SECOND/PVRCNN | download | trained for KITTI3D |
+&nbsp; | nuScenes | SECOND/PVRCNN | download | trained for KITTI3D |
+&nbsp; | KITTI360 | SECOND/PVRCNN | download | trained for KITTI3D |
+&nbsp; | ONCE Small | SECOND/PVRCNN | download | trained for ONCE |
 
 
 Here are links to pre-trained models

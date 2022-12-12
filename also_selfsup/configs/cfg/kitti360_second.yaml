@@ -1,0 +1,67 @@
+
+name: KITTI360
+dataset_name: KITTI360
+dataset_root: data/KITTI-360
+desc: inI_predI
+save_dir: results/KITTI-360
+
+# splits
+train_split: train
+val_split: val
+test_split: val
+
+# inputs
+inputs: ["pos", "intensities"] 
+
+# optimization
+training:
+  max_epochs: 100
+  batch_size: 8
+  val_interval: 5
+
+optimizer: torch.optim.AdamW
+optimizer_params:
+  lr: 0.001
+
+# network
+network:
+  framework: spconv
+  backbone: SECOND
+  backbone_params: 
+    config: "./configs/misc/second_for_pretraining_kitti.yaml"
+    quantization_params:
+      spatial_extent: [0, -40, -3, 70.4, 40, 1] # spatial extent of the scene (only for spconv)
+      voxel_size: [0.05, 0.05, 0.1]
+  decoder: InterpNet
+  decoder_params:
+    radius: 1.0
+    column_search: true
+    out_channels: 2
+    intensity_loss: true
+    radius_search: True
+  latent_size: 128
+
+# losses
+loss:
+  recons_loss_lambda: 1
+  intensity_loss_lambda: 1
+
+# misc
+device: cuda
+num_device: 1
+threads: 6
+interactive_log: 0
+logging: INFO
+resume: null
+
+
+# sampling
+manifold_points: 80000
+non_manifold_points: 4096
+
+# data augmentation
+transforms:
+  voxel_decimation: 0.05
+  scaling_intensities: false
+  random_rotation_z: true
+  random_flip: true
