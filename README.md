@@ -187,14 +187,14 @@ python train.py --cfg_file cfgs/kitti_models/second.yaml --extra_tag --pretraine
 
 Task | Pre-training dataset | Model | Link | Notes |
 ---|---|---|---|---|
-Semantic segmentation | nuScenes | MinkUNet34   | download |
-&nbsp; | &nbsp; | SPVCNN     | download |
-&nbsp; | SemanticKITTI | MinkUNet18SC  | download |
-&nbsp; | &nbsp; | SPVCNN     | download |
-Detection | KITTI3D | SECOND/PVRCNN | download | trained for KITTI3D |
-&nbsp; | nuScenes | SECOND/PVRCNN | download | trained for KITTI3D |
-&nbsp; | KITTI360 | SECOND/PVRCNN | download | trained for KITTI3D |
-&nbsp; | ONCE Small | SECOND/PVRCNN | download | trained for ONCE |
+Semantic segmentation | nuScenes | MinkUNet34   | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_nuscenes_minkunet_epoch_199.ckpt) |
+&nbsp; | &nbsp; | SPVCNN     | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_nuscenes_spvcnn_epoch_199.ckpt) |
+&nbsp; | SemanticKITTI | MinkUNet18SC  | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_semantickitti_minkunetsc_epoch_49.ckpt) |
+&nbsp; | &nbsp; | SPVCNN     | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_semantickitti_spvcnn_epoch_49.ckpt) |
+Detection | KITTI3D | SECOND/PVRCNN | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_kitti3d_second_epoch_499.ckpt) | trained for KITTI3D |
+&nbsp; | nuScenes | SECOND/PVRCNN | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_nuscenes_second_epoch_99.ckpt) | trained for KITTI3D |
+&nbsp; | KITTI360 | SECOND/PVRCNN | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_kitti360_second_epoch_74.ckpt) | trained for KITTI3D |
+&nbsp; | ONCE Small | SECOND/PVRCNN | [download](https://github.com/valeoai/ALSO/releases/download/v0.0.0/pretrained_backbone_also_once_second_epoch_39.ckpt) | trained for ONCE |
 
 
 Here are links to pre-trained models
