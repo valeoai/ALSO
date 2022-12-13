@@ -18,7 +18,7 @@
 
 <br/>
 
-[![Arxiv](http://img.shields.io/badge/paper-arxiv.XXXX.XXXXX-B31B1B.svg)](https://github.com/valeoai/ALSO)
+[![Arxiv](http://img.shields.io/badge/paper-arxiv.2212.05867-B31B1B.svg)](https://arxiv.org/abs/2212.05867)
 
 <br/>
 
