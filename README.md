@@ -2,18 +2,17 @@
 
 # ALSO: Automotive Lidar Self-supervision by Occupancy estimation
 
-[Alexandre Boulch](https://boulch.eu/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+[Alexandre Boulch](https://boulch.eu/)<sup>1</sup>&nbsp;&nbsp;&nbsp;
 [Corentin Sautier](https://scholar.google.com/citations?user=xYDkHEsAAAAJ&hl=en&oi=ao)<sup>1,2</sup>&nbsp;&nbsp;&nbsp;
-[Björn Michele](https://github.com/BjoernMichele)<sup>1,4</sup>&nbsp;&nbsp;&nbsp;
-[Gilles Puy](https://sites.google.com/site/puygilles/)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
-[Renaud Marlet](http://imagine.enpc.fr/~marletr/)<sup>1,2,3</sup>
+[Björn Michele](https://github.com/BjoernMichele)<sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+[Gilles Puy](https://sites.google.com/site/puygilles/)<sup>1</sup>&nbsp;&nbsp;&nbsp;
+[Renaud Marlet](http://imagine.enpc.fr/~marletr/)<sup>1,2</sup>
 
 <sub>
 <sup>1</sup> Valeo.ai, Paris, France
 <sup>2</sup> LIGM, Ecole des Ponts, Univ Gustave Eiffel, CNRS, Marne-la-Vallée, France
 
-<sup>3</sup> Inria, Paris, France
-<sup>4</sup> CNRS, IRISA, Univ. Bretagne Sud, Vannes, France
+<sup>3</sup> CNRS, IRISA, Univ. Bretagne Sud, Vannes, France
 </sub>
 
 <br/>
