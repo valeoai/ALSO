@@ -203,7 +203,7 @@ Here are links to pre-trained models
 
 ## Acknowledgments
 
-This project would not have been possible without many community ressources and repositories. Among them:
+This project would not have been possible without many community resources and repositories. Among them:
 
 - [PointContrast](https://github.com/facebookresearch/PointContrast)
 - [SLidR](https://github.com/valeoai/SLidR)
