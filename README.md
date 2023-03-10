@@ -21,6 +21,9 @@
 
 <br/>
 
+ALSO has been accepted at CVPR 2023
+
+<br/>
 
 ![Overview](doc/overview.png)
 
