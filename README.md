@@ -51,7 +51,12 @@ This is the reference PyTorch implementation for training and testing self-super
 Please acknowledge our work in your publications:
 
 ```
-To be added
+@InProceedings{ALSO,
+author = {Alexandre Boulch and Corentin Sautier and Björn Michele and Gilles Puy and Renaud Marlet},
+title = {{ALSO}: Automotive Lidar Self-supervision by Occupancy estimation},
+booktitle = {International Conference on Computer Vision and Pattern Recognition (CVPR)},
+year = 2023,
+}
 ```
 
 ## Dependencies
