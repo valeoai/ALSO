@@ -1,18 +1,16 @@
-import torch
 import torch_geometric.transforms as T
 import logging
+
 import importlib
 
-# from networks import backbone
+from transforms.create_inputs import CreateInputs
+from transforms.create_points import CreatePoints
+from transforms.dupplicate import Dupplicate
+from transforms.random_rotate import RandomRotate
+from transforms.random_flip import RandomFlip
+from transforms.scaling import Scaling
+from transforms.voxel_decimation import VoxelDecimation
 
-import also_selfsup
-from also_selfsup.transforms.create_inputs import CreateInputs
-from also_selfsup.transforms.create_points import CreatePoints
-from also_selfsup.transforms.dupplicate import Dupplicate
-from also_selfsup.transforms.random_rotate import RandomRotate
-from also_selfsup.transforms.random_flip import RandomFlip
-from also_selfsup.transforms.scaling import Scaling
-from also_selfsup.transforms.voxel_decimation import VoxelDecimation
 
 class CleanData(object):
 
@@ -98,14 +96,13 @@ def get_transforms(config, network_function=None, train=True, downstream=False, 
         if augmentations["random_flip"]:
             logging.info("Transforms - Flip")
             transforms.append(RandomFlip(["pos", "pos_non_manifold"]))
-    
+
     transforms.append(CreateInputs(config["inputs"]))
 
     if config["network"]["framework"] is not None:
         logging.info(f"Transforms - Quantize - {config['network']['framework']}")
-        module_name = "also_selfsup.networks.backbone."+config["network"]["framework"]
-        importlib.import_module(module_name)
-        transforms.append(eval(module_name+".Quantize")(**config["network"]["backbone_params"]["quantization_params"]))
+        model_module = importlib.import_module("networks.backbone." + config["network"]["framework"])
+        transforms.append(model_module.Quantize(**config["network"]["backbone_params"]["quantization_params"]))
 
     transforms = T.Compose(transforms)
 

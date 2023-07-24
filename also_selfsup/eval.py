@@ -1,5 +1,3 @@
-import os
-import numpy as np
 import yaml
 import logging
 import argparse
@@ -14,7 +12,7 @@ import torch
 
 from torch_geometric.data import DataLoader
 
-from utils.utils import wblue, wgreen
+from utils.utils import wgreen
 from utils.confusion_matrix import ConfusionMatrix
 from transforms import get_transforms, get_input_channels
 
@@ -25,7 +23,7 @@ from networks.backbone import *
 
 
 if __name__ == "__main__":
-    warnings.filterwarnings("ignore", category=UserWarning) 
+    warnings.filterwarnings("ignore", category=UserWarning)
 
     logging.getLogger().setLevel("INFO")
 
@@ -41,7 +39,7 @@ if __name__ == "__main__":
     DatasetClass = eval("datasets."+config["dataset_name"])
     test_transforms = get_transforms(config, train=False, downstream=True, keep_orignal_data=True)
     test_dataset = DatasetClass(config["dataset_root"],
-                split=opts.split, 
+                split=opts.split,
                 transform=test_transforms,
                 )
 
@@ -54,12 +52,10 @@ if __name__ == "__main__":
         follow_batch=["voxel_coords"]
     )
 
-
     num_classes = config["downstream"]["num_classes"]
     device = torch.device("cuda")
 
-
-    logging.info("Network")    
+    logging.info("Network")
     if config["network"]["backbone_params"] is None:
         config["network"]["backbone_params"] = {}
     config["network"]["backbone_params"]["in_channels"] = get_input_channels(config["inputs"])
@@ -73,10 +69,9 @@ if __name__ == "__main__":
     net = eval(backbone_name)(**config["network"]["backbone_params"])
     net.to(device)
     net.eval()
-    
+
     logging.info("Loading the weights from pretrained network")
     net.load_state_dict(torch.load(opts.ckpt), strict=True)
-
 
     cm = ConfusionMatrix(num_classes, 0)
     with torch.no_grad():
@@ -113,4 +108,3 @@ if __name__ == "__main__":
     logging.info(f"MIoU: {miou}")
     logging.info(f"FIoU: {freqweighted_iou}")
     logging.info(f"IoU per class: {iou_per_class}")
-
