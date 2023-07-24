@@ -130,19 +130,19 @@ python train_selfsupervised.py ... cfg.network.backbone=SPVCNN
 ```bash
 
 # 100%
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=30 cfg.val_interval=5 cfg.downstream.skip_ratio=1
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=30 cfg.downstream.val_interval=5 cfg.downstream.skip_ratio=1
 
 # 50%
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=50 cfg.val_interval=5 cfg.downstream.skip_ratio=2
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=50 cfg.downstream.val_interval=5 cfg.downstream.skip_ratio=2
 
 # 10%
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=100 cfg.val_interval=10 cfg.downstream.skip_ratio=10
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=100 cfg.downstream.val_interval=10 cfg.downstream.skip_ratio=10
 
 # 1%
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=500 cfg.val_interval=50 cfg.downstream.skip_ratio=100
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=500 cfg.downstream.val_interval=50 cfg.downstream.skip_ratio=100
 
 # 0.1%
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=1000 cfg.val_interval=100 cfg.downstream.skip_ratio=1000
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.max_epochs=1000 cfg.downstream.val_interval=100 cfg.downstream.skip_ratio=1000
 ```
 
 #### With pretrained models
@@ -154,7 +154,7 @@ python convert_models.py --ckpt path_to_pretraining_checkpoint
 
 Second, run downstream training
 ```bash
-python train_downstream_semseg.py cfg=nuscenes cfg.downstream.checkpoint_dir='path_to_checkpoint_directory' cfg.downstream.checkpoint_name='pretrained_backbone_XXX.ckpt'
+python also_selfsup/train_downstream_semseg.py cfg=nuscenes cfg.downstream.checkpoint_dir='path_to_checkpoint_directory' cfg.downstream.checkpoint_name='pretrained_backbone_XXX.ckpt'
 ```
 
 #### Evaluation of downstream models
